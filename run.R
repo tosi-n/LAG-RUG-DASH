@@ -5,7 +5,7 @@
 # Created by Tosin on 26/11/2019
 # MIT License and shit
 #
-
+library(rmarkdown)
 library(shiny)
 
 # When we run nginx we need to change R to point to the /app folder manually
