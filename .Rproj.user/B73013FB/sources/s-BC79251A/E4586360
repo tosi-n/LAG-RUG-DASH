@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574771579988.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E4586360",
+    "lastKnownWriteTime" : 1574774591,
+    "last_content_update" : 1574774591476,
+    "path" : "/Volumes/Loopdisk/Swapboard/Swapdash_v0.2.Rmd",
+    "project_path" : "Swapdash_v0.2.Rmd",
+    "properties" : {
+        "cursorPosition" : "55,25",
+        "scrollLine" : "46"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

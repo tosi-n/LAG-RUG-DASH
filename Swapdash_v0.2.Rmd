@@ -1,0 +1,199 @@
+---
+title: "SWAPBOARD"
+output: 
+  flexdashboard::flex_dashboard:
+  #  navbar:
+  #    - { title: "About", href: }
+  #    - { title: "Data", href: }
+    orientation: rows
+  #  source_code: ""
+    vertical_layout: scroll
+  #  logo: Asset_2.png
+runtime: shiny
+---
+
+<style>
+.logo {
+ size: 35%;
+}
+.navbar {
+  background-color:orange;
+  border-color:orange;
+}
+.navbar-brand {
+color:orrange!important;
+}
+
+.navbar-nav li a:hover, .navbar-nav > .active > a {
+color: orange !important;
+
+background-color:#fff !important;
+background-image: none !important;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(viridis)
+library(tidyverse)
+library(plotly)
+library(shiny)
+library(scales)
+library(DT)
+library(writexl)
+library(echarts4r)
+
+# Gets the port # from Heroku
+port <- Sys.getenv('PORT')
+
+# Runs the app in the working directory. By default this will search for an `app.R` file or 
+# a ui.R + server.R file combination
+# The host of 0.0.0.0 indicates the app runs at the web server's ip address
+shiny::runApp(
+  appDir = getwd(),
+  host = '0.0.0.0',
+  port = as.numeric(port)
+)
+```
+
+
+
+```{r global}
+# access to data
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4850/datasets/movies.Rdata"))
+```
+
+Exploratory
+=================================================================
+
+Inputs {.sidebar}
+-----------------------------------------------------------------------
+
+<style>
+.sidebar {
+  background-color:orange;
+  border-color:orange;
+}
+</style>
+
+```{r}
+# from https://stackoverflow.com/questions/42148177/how-can-i-build-multiple-inputs-into-my-shiny-app-with-both-updating-and-multipl
+
+# Select variable for y-axis
+selectInput(inputId = "y", 
+                  label = "Y-axis:",
+                  choices = c("IMDB rating"          = "imdb_rating", 
+                              "IMDB number of votes" = "imdb_num_votes", 
+                              "Critics score"        = "critics_score", 
+                              "Audience score"       = "audience_score", 
+                              "Runtime"              = "runtime"), 
+                  selected = "audience_score")
+
+# Select variable for x-axis
+selectInput(inputId = "x", 
+            label = "X-axis:",
+            choices = c("IMDB rating"          = "imdb_rating", 
+                        "IMDB number of votes" = "imdb_num_votes", 
+                        "Critics score"        = "critics_score", 
+                        "Audience score"       = "audience_score", 
+                        "Runtime"              = "runtime"), 
+            selected = "critics_score")
+      
+# Select variable for color
+selectInput(inputId = "z", 
+            label = "Color by:",
+            choices = c("Title type" = "title_type", 
+                        "Genre" = "genre", 
+                        "MPAA rating" = "mpaa_rating", 
+                        "Critics rating" = "critics_rating", 
+                        "Audience rating" = "audience_rating"),
+            selected = "mpaa_rating")
+
+
+```
+
+
+Row
+-----------------------------------------------------------------------
+
+### Highest Critics Score
+
+```{r}
+renderValueBox({ 
+  critiq_score <- length(unique(movies$critics_score))
+  valueBox(critiq_score, icon = "fa-commenting", color = "gray")
+})
+```
+
+### Number of Movies
+
+```{r}
+renderValueBox({ 
+  movies_n <- length(unique(movies$title))
+  valueBox(movies_n, icon = "fa-film", color = "orange")
+})
+```
+
+### Number of Production Studio
+
+```{r}
+renderValueBox({ 
+  studio_n <- length(unique(movies$studio))
+  valueBox(studio_n, icon = "fa-video-camera", color = "gray")
+})
+```
+
+Row {data-width=400 data-height=150}
+-----------------------------------------------------------------------
+
+### Audience Satisfaction
+
+```{r}
+satisfaction <- length(unique(movies$audience_score))
+gauge(satisfaction, min = 0, max = 100, symbol = '%', 
+  label = "Audience Satisfaction", gaugeSectors(
+  success = c(80, 100), warning = c(40, 79), danger = c(0, 39)
+))
+```
+
+
+
+### Top Comment
+
+Each component within a dashboard includes optional title, which is the text following the level 3 heading ###
+
+Notes are any text prefaced with > after the code chunk that yields the component’s output, like
+
+
+
+Row {data-width=400 data-height=350}
+-----------------------------------------------------------------------
+
+### Relationship between Audience Satisfaction and Critics Review
+
+```{r}
+renderPlotly({
+    p <- ggplot(data = movies, aes_string(x = input$x, y = input$y,
+                                     color = input$z)) +
+      geom_point()
+    ggplotly(p)
+  })
+```
+
+
+
+### Hybrid OA licenses found (absolute)
+
+```{r}
+renderPlotly({
+    p <- ggplot(data = movies, aes_string(x = input$x, y = input$y,
+                                     color = input$z)) +
+      geom_point()
+    ggplotly(p)
+  })
+```
+
+
+Predict
+=================================================================
