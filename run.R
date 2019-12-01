@@ -23,7 +23,7 @@ attr(port, 'mask') <- strtoi("117", 8)
 # a ui.R + server.R file combination
 # In this case the port is now the address to the nginx proxy
 rmarkdown::run(
-  'Swapdash_v0.2.Rmd'
+  'LAG_RUG_DASH_v0.2'
   , shiny_args = list(
     port = port
   )

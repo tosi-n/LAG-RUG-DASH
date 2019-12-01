@@ -8,6 +8,7 @@
 
 my_packages = c("rmarkdown","httr", "flexdashboard", "viridis", "tidyverse", "plotly", "shiny", "scales", "DT", "writexl", "echarts4r", "tools", "naniar", "mice", "devtools")
 
+
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
     install.packages(p)
