@@ -25,7 +25,7 @@ port <- Sys.getenv('PORT')
 # a ui.R + server.R file combination
 # In this case the port is now the address to the nginx proxy
 rmarkdown::run(
-  'Swapdash_v0.2.Rmd'
+  'LAG_RUG_DASH_v0.2.Rmd'
   , shiny_args = list(
     host = '0.0.0.0',
     port = as.numeric(port)
