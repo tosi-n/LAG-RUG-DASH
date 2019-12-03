@@ -3,7 +3,7 @@
 # Swapboard
 #
 # Created by Tosin on 26/11/2019
-# MIT License and shit
+# MIT License
 #
 library(rmarkdown)
 library(shiny)
