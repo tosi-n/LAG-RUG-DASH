@@ -15,7 +15,6 @@ port <- Sys.getenv('PORT')
 
 
 # Runs the app in the working directory. By default this will search for an `app.R` file or 
-# a ui.R + server.R file combination
 # In this case the port is now the address to the nginx proxy
 rmarkdown::run(
   'LAG_RUG_DASH_v0.2.Rmd'
