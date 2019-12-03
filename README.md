@@ -6,7 +6,7 @@ DEC 1, 2019
 <center>
 
 ![LAGOS RUG
-LOGO](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/R-User-Group-Lagos.jpg)
+LOGO](/docs/img/R-User-Group-Lagos.jpg)
 
 </center>
 
@@ -55,7 +55,7 @@ in order to get started. Run the following in command prompt
 
 ### File Paths
 
-![Directory](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/Directory.png)
+![Directory](/docs/img/Directory.png)
 
 ### Alternatively
 
@@ -71,7 +71,7 @@ and R lang 3.4.4\>. Download all from link
 
 In Rstudio, install package dependencies using the init.r file. Open
 init.r and click run to install deependencies on Rstudio.
-![Init\_script](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/init_script.png)
+![Init\_script](/docs/img/init_script.png)
 
 ### Design and Layout
 
@@ -83,7 +83,7 @@ Layout operates in 4 TIERS based on client or user requirements
   - Widgets / Components
 C
 
-![Init\_script](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/Design_Layout.png)
+![Init\_script](/docs/img/Design_Layout.png)
 Edit code in LAG\_RUG\_DASH\_v0.2.Rmd to fit your requirement. <br></br>
 
 Note: sidebar is used for creating dashboard input data or feature to be
