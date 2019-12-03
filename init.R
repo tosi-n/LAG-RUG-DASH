@@ -1,12 +1,12 @@
 #
 # init.R
-# swapboard
+# LAG-RUG-DASH
 #
-# Created by blakiseskream on 5/7/2018
-# MIT License and shit
+# Created by Tosin-Dairo on 1/12/2019
+# MIT License
 #
 
-my_packages = c("rmarkdown","httr", "flexdashboard", "viridis", "tidyverse", "plotly", "shiny", "scales", "DT", "writexl", "echarts4r", "tools", "naniar", "mice", "devtools")
+my_packages = c("rmarkdown","httr", "flexdashboard", "tidyverse", "plotly", "shiny", "scales", "DT", "echarts4r", "tools", "naniar", "mice", "devtools")
 
 
 install_if_missing = function(p) {

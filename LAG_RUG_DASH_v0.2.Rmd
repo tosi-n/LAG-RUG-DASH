@@ -56,7 +56,7 @@ library(naniar)
 # access to data
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4850/datasets/movies.Rdata"))
 #setwd("/Volumes/Loopdisk/Swapboard/data/")
-#cs_intent <- read_csv("/Volumes/Loopdisk/Swapboard/data/online_shoppers_intention.csv")
+#cs_intent <- read_csv("/Volumes/Loopdisk/LAG-RUG-DASH/data/online_shoppers_intention.csv")
 cs_intent <- read_csv("/app/data/online_shoppers_intention.csv")
 all_studios <- sort(unique(movies$studio))
 ```
