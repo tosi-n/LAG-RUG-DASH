@@ -2,7 +2,11 @@
 # run.R
 # LAG-RUG-DASH
 #
+<<<<<<< HEAD
 # Created by Tosin on 1/12/2019
+=======
+# Created by Tosin on 26/11/2019
+>>>>>>> Update Dashboard
 # MIT License
 #
 library(rmarkdown)
