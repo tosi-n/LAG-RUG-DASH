@@ -11,11 +11,11 @@ LOGO](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/R-User-Group-Lagos.jpg)
 </center>
 
 [![Generic
-badge](https://img.shields.io/badge/release-v0.2-blue.svg)](https://shields.io/)
+badge](https://img.shields.io/badge/release-v0.2-blue.svg)](https://tosi-n.github.io/post/dashboard_r/)
 [![Generic
 badge](https://img.shields.io/badge/build-passing-green.svg)](https://shields.io/)
 [![Generic
-badge](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
+badge](https://img.shields.io/badge/license-MIT-green.svg)](/LICENSE)
 [![Generic
 badge](https://img.shields.io/badge/community-R-blue.svg)](https://shields.io/)
 [![Open Source Love

@@ -6,16 +6,16 @@ DEC 1, 2019
 <center>
 
 ![LAGOS RUG
-LOGO](/docs/img/R-User-Group-Lagos.jpg)
+LOGO](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/R-User-Group-Lagos.jpg)
 
 </center>
 
 [![Generic
-badge](https://img.shields.io/badge/release-v0.2-blue.svg)](https://shields.io/)
+badge](https://img.shields.io/badge/release-v0.2-blue.svg)](https://tosi-n.github.io/post/dashboard_r/)
 [![Generic
 badge](https://img.shields.io/badge/build-passing-green.svg)](https://shields.io/)
 [![Generic
-badge](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
+badge](https://img.shields.io/badge/license-MIT-green.svg)](/LICENSE)
 [![Generic
 badge](https://img.shields.io/badge/community-R-blue.svg)](https://shields.io/)
 [![Open Source Love
@@ -55,7 +55,7 @@ in order to get started. Run the following in command prompt
 
 ### File Paths
 
-![Directory](/docs/img/Directory.png)
+![Directory](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/Directory.png)
 
 ### Alternatively
 
@@ -71,7 +71,7 @@ and R lang 3.4.4\>. Download all from link
 
 In Rstudio, install package dependencies using the init.r file. Open
 init.r and click run to install deependencies on Rstudio.
-![Init\_script](/docs/img/init_script.png)
+![Init\_script](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/init_script.png)
 
 ### Design and Layout
 
@@ -83,7 +83,7 @@ Layout operates in 4 TIERS based on client or user requirements
   - Widgets / Components
 C
 
-![Init\_script](/docs/img/Design_Layout.png)
+![Init\_script](/Volumes/Loopdisk/LAG-RUG-DASH/docs/img/Design_Layout.png)
 Edit code in LAG\_RUG\_DASH\_v0.2.Rmd to fit your requirement. <br></br>
 
 Note: sidebar is used for creating dashboard input data or feature to be
